@@ -10,6 +10,7 @@ function setCart(c) {
 }
 
 function addToCart(item) {
+<<<<<<< HEAD
  var randomPrice = Math.floor((Math.random() * 100) + 1)
  var itemInfo = {itemName: item, itemPrice: randomPrice}
   cart.push(itemInfo)
@@ -29,6 +30,19 @@ function viewCart() {
    cartTalk.push(` ${cart[i].itemName} at $${cart[i].itemPrice}`)
 } return `In your cart, you have${cartTalk.join()}, and ${cart[cart.length - 1].itemName} at $${cart[cart.length - 1].itemPrice}.`
 }}
+=======
+ var itemPrice = Math.floor((Math.random() * 100) + 1)
+ var itemName = {[item]: itemPrice}
+  cart.push(itemName)
+  return `${itemName} has been added to your cart`
+}
+
+function viewCart() {
+ for (i = 0; cart.length > i; i++); 
+
+}
+
+>>>>>>> 052f320459051ffacfdb8f2b462816a707933cf8
 function total() {
   var totalCost = 0
   for (var i = 0; cart.length > i; i++){
